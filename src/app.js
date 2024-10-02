@@ -41,9 +41,9 @@ export function setupApp(root) {
     const list = event.target.parentNode.querySelector('#recipeList');
 
     const recipes = getRecipes();
-    console.log(recipes)
 
     if (isVisible) {
+      list?.appendChild(element("p", {}, ["Recipe List"]));
       list?.appendChild(element("div", { class: "row g-4" }));
       const row = event.target.parentNode.querySelector(".row");
       recipes.forEach(recipe => {
